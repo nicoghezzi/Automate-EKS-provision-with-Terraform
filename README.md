@@ -1,45 +1,79 @@
-## Project Summary
+# 🚀 AWS Infrastructure & Kubernetes Platform (Terraform + EKS)
 
-Built and automated AWS infrastructure using Terraform, covering both foundational cloud networking and Kubernetes cluster provisioning. The project started with designing a modular VPC that included dynamic subnets, NAT gateways, and Kubernetes-aware tagging, followed by automated EC2 provisioning with Docker and NGINX to validate network isolation and bootstrap workflows.
+![Cloud: AWS](https://img.shields.io/badge/Cloud-AWS-%23FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)  
+![IaC: Terraform](https://img.shields.io/badge/IaC-Terraform-%235835CC?style=for-the-badge&logo=terraform&logoColor=white)  
+![Kubernetes: EKS](https://img.shields.io/badge/Kubernetes-EKS-blue?style=for-the-badge&logo=kubernetes)  
+![Compute: EC2](https://img.shields.io/badge/Compute-EC2-orange?style=for-the-badge&logo=amazon-ec2)  
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-The work then expanded into provisioning a production-ready Amazon EKS cluster using Terraform modules, integrating it with the existing VPC and deploying managed node groups in private subnets for security and scalability. The repository contains two branches, with the more advanced Kubernetes and EKS implementation available in the feature/eks branch.
+A production-style infrastructure project that demonstrates how to design and provision **scalable AWS cloud environments** using **Terraform**, evolving from foundational networking to a **fully automated Amazon EKS cluster** deployed in secure private subnets.
 
-## Tools Used
+---
 
-- Terraform
-Used as the primary Infrastructure as Code tool to define modular AWS networking, EC2 resources, and EKS clusters.
+## 📌 Project Overview
 
-- AWS (VPC, EC2, NAT Gateway, EKS, IAM): Provisioned cloud networking, compute, and managed Kubernetes services with secure defaults and private networking.
+This project showcases an end-to-end infrastructure journey:
 
-- Terraform AWS EKS Module: Leveraged to automate control plane creation and managed node group provisioning.
+- Designed a **modular VPC architecture** with dynamic subnets, NAT gateways, and Kubernetes-aware tagging  
+- Provisioned **EC2 instances with Docker + NGINX** to validate networking and bootstrap workflows  
+- Extended the platform to deploy a **production-ready Amazon EKS cluster** using Terraform modules  
+- Implemented **managed node groups in private subnets** for improved security and scalability  
+- Structured development using branches, with advanced implementation in `feature/eks`
 
-- Bash: Used for EC2 bootstrap scripting to install and configure Docker and NGINX during instance initialization.
+---
 
-## Skills I applied
+## 🧰 Tech Stack
 
-- Terraform Module Design
-Designed reusable and parameterized modules to support scalable VPC, EC2, and EKS infrastructure.
+- **Terraform** – Infrastructure as Code for AWS resources and EKS provisioning  
+- **AWS** – VPC, EC2, NAT Gateway, IAM, and EKS  
+- **Terraform AWS EKS Module** – Simplified Kubernetes control plane and node group setup  
+- **Bash** – EC2 bootstrap automation (Docker + NGINX setup)
 
-- AWS Cloud Networking
-Configured VPCs with public and private subnets, NAT gateways, and DNS settings to support both EC2 workloads and private EKS node groups.
+---
 
-- Kubernetes Infrastructure Automation
-Provisioned Amazon EKS clusters and managed node groups using Terraform, aligning Kubernetes workloads with AWS networking and IAM requirements.
+## 💡 Key Skills Demonstrated
 
-- Infrastructure Orchestration
-Gained hands-on experience with how Terraform coordinates AWS APIs and CloudFormation stacks during EKS provisioning.
+### 🏗️ Terraform Module Design
+- Built reusable and parameterized modules for VPC, EC2, and EKS  
+- Enabled scalable and maintainable infrastructure patterns  
 
-## Some of the Challenges I faced
+### 🌐 AWS Cloud Networking
+- Configured **public/private subnets**, NAT gateways, and DNS  
+- Supported secure communication for EC2 workloads and EKS nodes  
 
-- Dynamic Availability Zone Management
-Avoided hardcoded configurations by dynamically querying availability zones to improve portability and resilience.
+### ☸️ Kubernetes Infrastructure Automation
+- Provisioned **Amazon EKS clusters and managed node groups**  
+- Integrated Kubernetes with AWS IAM and networking  
 
-- Private Subnet Connectivity
-Enabled outbound internet access for private resources by correctly configuring NAT gateways and VPC DNS settings.
+### ⚙️ Infrastructure Orchestration
+- Understood how Terraform interacts with AWS APIs and CloudFormation  
+- Managed dependencies across networking and Kubernetes layers  
 
-- EKS IAM and Node Group Setup
-Automated IAM role creation and permissions required for EKS control plane and worker nodes, resolving common cluster bootstrap issues.
+---
 
-## Practical Experience
+## ⚠️ Challenges & Solutions
 
-This project reflects real-world infrastructure work where cloud networking, compute, and Kubernetes must be designed together. It demonstrates the ability to build AWS environments from the ground up using Terraform, then layer a production-ready EKS cluster on top using modular, repeatable patterns. The separation into branches highlights an iterative approach, with the feature/eks branch showcasing the more advanced Kubernetes-focused implementation that a hiring manager can review in depth.
+### 🔄 Dynamic Availability Zones
+- Avoided hardcoding by dynamically querying AZs  
+- Improved portability and resilience across regions  
+
+### 🔐 Private Subnet Connectivity
+- Enabled outbound internet access via **NAT gateways**  
+- Configured VPC DNS for proper service resolution  
+
+### 🧩 EKS IAM & Node Group Setup
+- Automated IAM roles and permissions for cluster + nodes  
+- Resolved common bootstrap and access issues  
+
+---
+
+## 🧪 Practical Experience
+
+This project reflects real-world infrastructure engineering where **networking, compute, and Kubernetes must work together**.
+
+- Built AWS infrastructure **from scratch using Terraform**
+- Layered a **production-ready Kubernetes platform (EKS)** on top  
+- Applied **modular, repeatable patterns used in real environments**
+- Demonstrated **iterative development**, with:
+  - Base infrastructure in `main`
+  - Advanced Kubernetes implementation in `feature/eks`
