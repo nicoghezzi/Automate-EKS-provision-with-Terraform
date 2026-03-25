@@ -1,8 +1,11 @@
 # 🚀 AWS Infrastructure & Kubernetes Platform (Terraform + EKS)
 
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange?style=flat-square)
-![Terraform](https://img.shields.io/badge/Terraform-IaC-purple?style=flat-square)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-EKS-blue?style=flat-square)
+![Infrastructure: Terraform](https://img.shields.io/badge/Infrastructure-Terraform-%235835CC?style=for-the-badge&logo=terraform&logoColor=white)
+![Cloud: AWS](https://img.shields.io/badge/Cloud-AWS-%23FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Kubernetes: EKS](https://img.shields.io/badge/Kubernetes-EKS-%23326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Compute: EC2](https://img.shields.io/badge/Compute-EC2-%23FF9900?style=for-the-badge&logo=amazon-ec2&logoColor=white)
+![Networking: VPC](https://img.shields.io/badge/Networking-VPC-%23232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
 A production-style infrastructure project that demonstrates how to design and provision **scalable AWS cloud environments** using **Terraform**, evolving from foundational networking to a **fully automated Amazon EKS cluster** deployed in secure private subnets.
 
