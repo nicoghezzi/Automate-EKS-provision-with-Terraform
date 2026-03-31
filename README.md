@@ -1,4 +1,4 @@
-# 🚀 AWS Infrastructure & Kubernetes Platform (Terraform + EKS)
+# 🚀 AWS Infra & Kubernetes (Terraform + EKS)
 
 ![Infrastructure: Terraform](https://img.shields.io/badge/Infrastructure-Terraform-%235835CC?style=for-the-badge&logo=terraform&logoColor=white)
 ![Cloud: AWS](https://img.shields.io/badge/Cloud-AWS-%23FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
