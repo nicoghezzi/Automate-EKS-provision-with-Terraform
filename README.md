@@ -32,6 +32,33 @@ This project showcases an end-to-end infrastructure journey:
 
 ---
 
+## 🧪 Practical Experience
+
+This project reflects real-world infrastructure engineering where **networking, compute, and Kubernetes must work together**.
+
+- Built AWS infrastructure **from scratch using Terraform**
+- Layered a **production-ready Kubernetes platform (EKS)** on top  
+- Applied **modular, repeatable patterns used in real environments**
+- Demonstrated **iterative development**, with:
+  - Base infrastructure in `main`
+  - Advanced Kubernetes implementation in `feature/eks`
+
+---
+
+## 🧠 Engineering Decisions & Trade-offs
+
+| Decision | Rationale | Trade-off |
+|---|---|---|
+| **Terraform modules over custom resources** | Reused established patterns to provision VPC networking and EKS infrastructure consistently, reducing duplicated code and provisioning time. | Introduces module dependencies and requires version management and understanding of module defaults. |
+| **Private subnets for EKS worker nodes** | Keeps worker nodes off direct public internet exposure while allowing required outbound connectivity through NAT gateways. | NAT gateways add hourly and data-processing costs; routing and connectivity require additional configuration. |
+| **Managed node groups over self-managed nodes** | Delegates node provisioning and lifecycle integration to AWS, reducing operational overhead. | Provides less control over the underlying node lifecycle and requires understanding AWS-managed upgrade and scaling behavior. |
+| **Dynamic Availability Zone discovery** | Avoids hardcoding Availability Zones, making the configuration more adaptable across supported regions. | Available zones and regional service capacity can differ, so subnet and resource assumptions still require validation. |
+| **Layered infrastructure provisioning** | Built foundational VPC and EC2 networking first, then extended the architecture to EKS. This made dependencies easier to isolate and troubleshoot. | Adds intermediate configuration and requires careful management of dependencies and Terraform state. |
+
+**Key outcome:** Automated end-to-end EKS infrastructure provisioning with Terraform modules, reducing provisioning time to under 20 minutes. The design prioritizes repeatability, private networking, and reduced operational overhead while making cost and complexity trade-offs explicit.
+
+---
+
 ## 💡 Key Skills Demonstrated
 
 ### 🏗️ Terraform Module Design
@@ -68,13 +95,6 @@ This project showcases an end-to-end infrastructure journey:
 
 ---
 
-## 🧪 Practical Experience
-
-This project reflects real-world infrastructure engineering where **networking, compute, and Kubernetes must work together**.
-
-- Built AWS infrastructure **from scratch using Terraform**
-- Layered a **production-ready Kubernetes platform (EKS)** on top  
-- Applied **modular, repeatable patterns used in real environments**
-- Demonstrated **iterative development**, with:
-  - Base infrastructure in `main`
-  - Advanced Kubernetes implementation in `feature/eks`
+## 🚀 Author
+Nicolas Ghezzi 
+LinkedIn: https://www.linkedin.com/in/nghezzi/
