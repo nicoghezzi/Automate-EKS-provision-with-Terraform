@@ -96,5 +96,4 @@ This project reflects real-world infrastructure engineering where **networking, 
 ---
 
 ## 🚀 Author
-Nicolas Ghezzi 
-LinkedIn: https://www.linkedin.com/in/nghezzi/
+Nicolas Ghezzi LinkedIn: https://www.linkedin.com/in/nghezzi/
